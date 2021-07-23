@@ -11,8 +11,8 @@
 10. Developer和DevOps 的区别，以及Agile在开发中的作用，各个团队扮演的角色，CI/CD的用处
 
 ## __本节资料__
-1. [Introduction v3.8.pdf](https://github.com/NorrisWu0/JRAcademy-FullStack-T14/blob/main/L01%20Intro%20to%20Web/01%20Introduction%20v3.8.pdf)
-2. [Web v3.6.pdf](https://github.com/NorrisWu0/JRAcademy-FullStack-T14/blob/main/L01%20Intro%20to%20Web/01%20Web%20v3.6.pdf)
+1. [Introduction v3.8.pdf](https://github.com/NorrisWu0/JRAcademy-FullStack-T14/blob/main/l01_intro-to-web/01%20Introduction%20v3.8.pdf)
+2. [Web v3.6.pdf](https://github.com/NorrisWu0/JRAcademy-FullStack-T14/blob/main/l01_intro-to-web/01%20Web%20v3.6.pdf)
 3. [课程回放](https://learn.jiangren.com.au/classroom/program/60ab30e1c9ec202331ed03a8/60e92e93fc3e005911aa7952/60e92eabfc3e005911aa7953)
 
 ---
