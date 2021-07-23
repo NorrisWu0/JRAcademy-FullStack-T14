@@ -1,19 +1,18 @@
 :root {
-  --card-tag-color: #ff1e4f;
+  --card-bg-white: #ffffff;
+  --card-tag-color: #fc0d40;
   --card-tagText-color: #ffffff;
-  --card1-bg-color: #ffffff;
-  --card1-title-color: #101010;
-  --card1-subtitle-color: #999999;
-  --card1-likeBtn-color: #eeeeee;
-  --card1-likeBtn-hover-color: rgb(255, 117, 117);
-  --card1-likeBtn-clicked-color: #ff0000;
-  --card3-text-color: #ffffff;
-  --card3-review-color: #cccccc;
-  --card3-viewMore-color: #dbdbdb;
-  --card3-viewMore-hover-color: #ffffff;
-  --card5-review-color: #999999;
-  --card5-title-color: #101010;
-  --card5-subtitle-color: #b8b8b8;
+  /* Text Colors */
+  --card-text-black: #101010;
+  --card-text-lightGrey: #b8b8b8;
+  --card-text-grey: #999999;
+  --card-text-white: #ffffff;
+  /* Button Colors */
+  --card-viewMore-color: #cacaca;
+  --card-viewMore-hover-color: #ffffff;
+  --card-likeBtn-color: #d4d4d4;
+  --card-likeBtn-hover-color: #ff6f6f;
+  --card-likeBtn-clicked-color: #ff0000;
 }
 
 .cards {
@@ -31,117 +30,132 @@
   overflow: hidden;
 }
 
-.card-tag {
+/* Card Tag Design */
+
+.card__tag {
   position: absolute;
   top: 1em;
   right: 1em;
   z-index: 1;
   padding: 0.2em 1em;
-  opacity: 0.8;
+  opacity: 0.9;
   background: var(--card-tag-color);
   color: var(--card-tagText-color);
   border-radius: 3px;
 }
 
-/* Card 1 Design */
+/* Card Text Design  */
 
-.card1-top {
+.card__title_black {
+  margin: 0;
+  font-weight: 400;
+  color: var(--card-text-black);
+}
+
+.card__title_white {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--card-text-white);
+}
+
+.card__subtitle_grey {
+  margin: 0;
+  font-weight: 300;
+  color: var(--card-text-grey);
+}
+
+.card__subtitle_white {
+  margin: 0;
+  font-weight: 300;
+  color: var(--card-text-white);
+}
+
+.card__review {
+  margin: 1em 0 0;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: var(--card-text-lightGrey);
+}
+
+.card__pricing {
+  margin: 1em 0 0;
+}
+
+/* Card Like Button */
+
+.card__likeBtn .card__likeBtn__icon {
+  transition: 0.3;
+  fill: var(--card-likeBtn-color);
+}
+
+.card__likeBtn:hover .card__likeBtn__icon {
+  fill: var(--card-likeBtn-hover-color);
+}
+
+.card__likeBtn:active .card__likeBtn__icon {
+  fill: var(--card-likeBtn-clicked-color);
+}
+
+.card__likeBtn:visited .card__likeBtn__icon {
+  fill: var(--card-likeBtn-clicked-color);
+}
+
+/* Card 1 Specific Design */
+
+.card1__top {
   min-width: 100%;
 }
 
-.card1-image {
+.card1__image {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.card1-bot {
+.card1__bot {
   padding: 1em;
-  background: var(--card1-bg-color);
+  background: var(--card-bg-white);
   border-radius: 0 0 10px 10px;
 }
 
-.card1-bot-left {
+.card1__bot_left {
   display: inline-block;
 }
 
-.card1-bot-right {
+.card1__bot_right {
   float: right;
 }
 
-.card1-title {
-  margin: 0;
-  font-weight: 400;
-  color: var(--card1-title-color);
-}
-
-.card1-subtitle {
-  margin: 0;
-  font-weight: 300;
-  color: var(--card1-subtitle-color);
-}
-
-.card1-likeBtn .card1-likeBtn-icon {
-  transition: 0.3;
-  fill: var(--card1-likeBtn-color);
-}
-
-.card1-likeBtn:hover .card1-likeBtn-icon {
-  fill: var(--card1-likeBtn-hover-color);
-}
-
-.card1-likeBtn:visited .card1-likeBtn-icon {
-  fill: var(--card1-likeBtn-clicked-color);
-}
-
-/* Card 2 Design */
+/* Card 2 specific Design */
 
 .card2 {
   background-image: url('./assets/bg-6.png');
   background-size: cover;
 }
 
-.card2-description {
+.card2__description {
   position: absolute;
   bottom: 10%;
   left: 10%;
-  color: var(--card3-text-color);
 }
 
-.card2-title {
-  margin: 0;
-  font-size: 1.5em;
-  font-weight: 400;
-}
-
-.card2-subtitle {
-  margin: 0;
-  font-weight: 300;
-}
-
-.card2-review {
-  margin: 1em 0 0;
-  font-size: 0.8em;
-  font-weight: 300;
-  color: var(--card3-review-color);
-}
-
-.card2-viewMore {
+.card2__viewMore {
   position: absolute;
   bottom: 10%;
   right: 10%;
   font-size: 2em;
-  color: var(--card3-viewMore-color);
+  color: var(--card-viewMore-color);
   text-decoration: none;
   transition: 0.3s;
 }
 
-.card2-viewMore:hover {
-  color: var(--card3-viewMore-hover-color);
+.card2__viewMore:hover {
+  color: var(--card-viewMore-hover-color);
 }
 
-/* Card 3 Design */
+/* Card 3 Specific Design */
 
 .card3 {
   grid-column: span 2;
@@ -149,16 +163,16 @@
   background-size: cover;
 }
 
-/* Card 5 Design */
+/* Card 5 Specific Design */
 
-.card5-image {
+.card5__image {
   display: block;
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
 }
 
-.card5-description {
+.card5__description {
   position: absolute;
   padding: 1em;
   bottom: 0%;
@@ -169,26 +183,6 @@
   background: white;
 }
 
-.card5-title {
-  margin: 0;
-  font-size: 1.5em;
-  font-weight: 400;
-  color: var(--card5-title-color);
-}
-
-.card5-subtitle {
-  margin: 0;
-  font-weight: 500;
-  color: var(--card5-subtitle-color);
-}
-
-.card5-review {
-  margin: 0;
-  font-size: 0.8em;
-  font-weight: 300;
-  color: var(--card5-review-color);
-}
-
-.card5-pricing {
+.card5__pricing {
   margin: 1em 0 0;
 }
