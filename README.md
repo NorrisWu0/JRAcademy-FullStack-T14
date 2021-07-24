@@ -17,7 +17,7 @@ This repository contains the note & lecture materials for the Full-Stack course 
 
 - [课程大概](./course-materials/l03_css_scss/03_overview.md)
 - [00:00:00]
-  [CSS - Cascading Style Sheet - Part 2](./course-materials/l03_css_scss/03_overview.md)
+  [CSS - Cascading Style Sheet - Part 2](./course-materials/l03_css_scss/03_css.md)
 - [00:38:00]
   [Responsive Web Design](./course-materials/l03_css_scss/03_responsiveDesign.md)
 - [01:20:00]
