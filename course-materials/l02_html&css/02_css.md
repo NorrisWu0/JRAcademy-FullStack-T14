@@ -4,7 +4,7 @@
 <hr>
 <br>
 
-# | CSS - Cascading Style Sheets |
+# | CSS - Cascading Style Sheets - Part 1 |
 
 本部分内容包括，`css`的介绍及背景，编写`css`的方式，如何通过 Dev Tools 来查看`css`效果，selector，unit，box model。
 
