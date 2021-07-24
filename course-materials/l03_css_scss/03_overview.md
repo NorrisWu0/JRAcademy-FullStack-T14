@@ -33,6 +33,8 @@
 
 <br>
 
-## **课堂作业**
+## [02:50:00] **课堂作业**
+
+用今天新学的知识从 Card Design Samples 中再做 3 - 4 张卡片。能不用 position 就不用 position，尽量使用 flex。
 
 <br>

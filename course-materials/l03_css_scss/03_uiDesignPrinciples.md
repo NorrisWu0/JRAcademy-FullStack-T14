@@ -5,3 +5,13 @@
 <br>
 
 # | UI Design Principles |
+
+## Typography
+
+## Color Palette
+
+<br>
+<hr>
+<hr>
+
+## _[ 03:26:30 - Class end ]_

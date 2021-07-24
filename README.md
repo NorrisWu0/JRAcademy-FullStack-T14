@@ -18,13 +18,13 @@ This repository contains the note & lecture materials for the Full-Stack course 
 - [课程大概](./course-materials/l03_css_scss/03_overview.md)
 - [00:00:00]
   [CSS - Cascading Style Sheet - Part 2](./course-materials/l03_css_scss/03_overview.md)
-- [00:00:00]
-  [Sass - CSS Preprocessor](./course-materials/l03_css_scss/03_scss.md)
-- [00:00:00]
+- [00:38:00]
   [Responsive Web Design](./course-materials/l03_css_scss/03_responsiveDesign.md)
-- [00:00:00]
+- [01:20:00]
+  [Sass - CSS Preprocessor](./course-materials/l03_css_scss/03_scss.md)
+- [02:15:00]
   [Flexbox](./course-materials/l03_css_scss/03_flexbox.md)
-- [00:00:00]
+- [03:03:00]
   [Bootstrap](./course-materials/l03_css_scss/03_bootstrap.md)
-- [00:00:00]
+- [03:19:00]
   [UI Design Principles](./course-materials/l03_css_scss/03_uiDesignPrinciples.md)
