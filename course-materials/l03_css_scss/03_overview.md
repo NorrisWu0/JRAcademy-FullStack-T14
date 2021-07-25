@@ -29,7 +29,7 @@
 1. [HTML & CSS 2 v3.1.pdf](https://github.com/NorrisWu0/JRAcademy-FullStack-T14/blob/lectures/lecture-03-css-scss/course-materials/l03_css_scss/03%20HTML%26CSS%202%20v3.1.pdf)
 2. [CSS v3.1.pdf](https://github.com/NorrisWu0/JRAcademy-FullStack-T14/blob/lectures/lecture-03-css-scss/course-materials/l02_html%26css/02%20CSS%20v3.1.pdf)
 3. [CSS - Specificity](https://github.com/NorrisWu0/JRAcademy-FullStack-T14/blob/lectures/lecture-03-css-scss/course-materials/l03_css_scss/css%20-%20specificity.pdf)
-4. [课程回放]()
+4. [课程回放](https://learn.jiangren.com.au/classroom/program/60ab30e1c9ec202331ed03a8/60e92e93fc3e005911aa7952/60e92eabfc3e005911aa7957)
 
 <br>
 
@@ -38,3 +38,24 @@
 用今天新学的知识从 Card Design Samples 中再做 3 - 4 张卡片。能不用 position 就不用 position，尽量使用 flex。
 
 <br>
+
+## **本节目录**
+
+- [00:00:00]
+  [CSS - Cascading Style Sheet - Part 2](03_css.md)
+- [00:35:00]
+  [Responsive Web Design](03_responsiveDesign.md)
+- [01:20:00]
+  [Sass - CSS Preprocessor](03_scss.md)
+- [02:15:00]
+  [Flexbox](03_flexbox.md)
+- [03:03:00]
+  [Bootstrap](03_bootstrap.md)
+- [03:19:00]
+  [UI Design Principles](03_uiDesignPrinciples.md)
+
+<br>
+<hr>
+<hr>
+
+## _[ Class Start - [CSS](03_css.md) ]_
