@@ -1,0 +1,238 @@
+@import 'colors';
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1em;
+  padding: 3em;
+
+  .card {
+    position: relative;
+    margin: 1em;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px #2b2b2b59;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    &:active {
+      transform: scale(1.005);
+    }
+
+    /* Card Tag Design */
+    &__tag {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      z-index: 1;
+      padding: 0.2em 1em;
+      opacity: 0.9;
+      font-weight: 500;
+      border-radius: 3px;
+    }
+
+    .tag {
+      &__red {
+        background: $--card-tag-red;
+        color: $--card-text-white;
+      }
+
+      &__white {
+        background: $--card-tag-white;
+        color: $--card-text-black;
+      }
+    }
+
+    /* Card Text Design  */
+    &__title {
+      &_black {
+        margin: 0;
+        font-weight: 400;
+        color: $--card-text-black;
+      }
+
+      &_white {
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: 400;
+        color: $--card-text-white;
+      }
+    }
+
+    &__subtitle {
+      &_grey {
+        margin: 0;
+        font-weight: 300;
+        color: $--card-text-grey;
+      }
+
+      &_white {
+        margin: 0;
+        font-weight: 300;
+        color: $--card-text-white;
+      }
+
+      &_green {
+        margin: 0;
+        font-weight: 300;
+        color: $--card-text-green;
+      }
+    }
+
+    &__review {
+      margin: 1em 0 0;
+      font-size: 0.8em;
+      font-weight: 300;
+      color: $--card-text-lightGrey;
+    }
+
+    &__pricing {
+      margin: 1em 0 0;
+    }
+
+    /* View Trip Button */
+    &__viewTrip {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      padding: 0.5em 1em;
+      background-image: linear-gradient(
+        to right,
+        rgb(117, 43, 255),
+        rgb(28, 145, 255)
+      );
+      color: $--card-link-white;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: 0.3s;
+
+      &:hover {
+        color: $--card-link-white-hover;
+        transform: translateY(-0.1em);
+      }
+    }
+  }
+
+  /* Card Like Button */
+  .card__likeBtn {
+    .card__likeBtn__icon {
+      transition: 0.3;
+      fill: $--card-likeBtn-color;
+    }
+
+    &:hover .card__likeBtn__icon {
+      fill: $--card-likeBtn-hover-color;
+    }
+
+    &:active .card__likeBtn__icon {
+      fill: $--card-likeBtn-clicked-color;
+    }
+
+    &:visited .card__likeBtn__icon {
+      fill: $--card-likeBtn-clicked-color;
+    }
+  }
+}
+
+/* Card 1 Specific Design */
+.card1 {
+  &__top {
+    min-width: 100%;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__bot {
+    padding: 1em;
+    background: $--card-bg-white;
+    border-radius: 0 0 10px 10px;
+
+    &_left {
+      display: inline-block;
+    }
+
+    &_right {
+      float: right;
+    }
+  }
+}
+
+/* Card 2 specific Design */
+.card2 {
+  background-image: url('../assets/imgs/bg-6.png');
+  background-size: cover;
+
+  &__description {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+  }
+
+  &__viewMore {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 2em;
+    color: $--card-viewMore-color;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      color: $--card-viewMore-hover-color;
+    }
+  }
+}
+
+/* Card 3 Specific Design */
+.card3 {
+  grid-column: span 2;
+  background-image: url('../assets/imgs/bg-2.png');
+  background-size: cover;
+
+  &__description {
+    position: absolute;
+    bottom: 10%;
+    padding-left: 1em;
+    width: 70%;
+    font-size: 1.5em;
+    border-left: 4px solid $--card-text-green;
+  }
+
+  &__artWord {
+    position: absolute;
+    bottom: 0;
+    font-size: 10em;
+    color: $--card-text-white;
+    opacity: 0.1;
+  }
+}
+
+/* Card 5 Specific Design */
+.card5 {
+  &__image {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    position: absolute;
+    padding: 1em;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 75%;
+    border-radius: 10px;
+    background: $--card-bg-white;
+  }
+}

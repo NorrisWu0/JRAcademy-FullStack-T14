@@ -1,0 +1,22 @@
+@import 'colors';
+
+.heading {
+  height: 2em;
+  padding: 3em;
+  border-bottom: 1px solid $--text-color;
+}
+
+.assignments {
+  padding: 0 3em;
+  ul {
+    padding: 0;
+    list-style: none;
+    color: $--text-color;
+    li {
+      display: inline-block;
+      a {
+        color: $--link-color;
+      }
+    }
+  }
+}
