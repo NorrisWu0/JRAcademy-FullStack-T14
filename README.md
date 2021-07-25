@@ -2,6 +2,8 @@
 
 This repository contains the note & lecture materials for the Full-Stack course @ JRAcademy
 
+# Following links only work in `lecture` related branches!!!
+
 ## Lecture 01 - Intro to web
 
 - [课程大概](./course-materials/l01_intro-to-web/01_overview.md)
