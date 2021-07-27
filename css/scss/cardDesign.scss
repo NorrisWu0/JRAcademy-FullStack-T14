@@ -95,14 +95,11 @@
     }
 
     &__review {
-      margin: 1rem 0 0;
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: $--card-text-lightGrey;
+      @include cardFont(1rem 0 0, 0.8rem, 300, $--card-text-lightGrey);
     }
 
     &__pricing {
-      margin: 1rem 0 0;
+      @include cardFont($margin: 1rem 0 0);
     }
 
     /* View Trip Button */
@@ -116,8 +113,8 @@
         rgb(117, 43, 255),
         rgb(28, 145, 255)
       );
-      color: $--card-link-white;
-      font-weight: 500;
+
+      @include cardFont($weight: 500, $color: $--card-link-white);
       text-decoration: none;
       border-radius: 50px;
       transition: 0.3s;
