@@ -1,5 +1,12 @@
 @import 'colors';
 
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-flow: $direction wrap;
+  justify-content: $justify;
+  align-content: $align;
+}
+
 @mixin tag($bgColor, $textColor) {
   background: $bgColor;
   color: $textColor;
@@ -167,29 +174,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 1rem;
+
     background: $--card-bg-white;
   }
 }
 
 /* Card 2 specific Design */
 .card2 {
+  @include flex(column, flex-end, stretch);
   background-image: url('../assets/imgs/bg-6.png');
   background-size: cover;
 
   &__description {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
+    @include flex(row, space-between, flex-end);
+    padding: 1rem;
   }
 
   &__viewMore {
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    font-size: 2rem;
-    color: $--card-viewMore-color;
+    @include cardFont($size: 2rem, $color: $--card-viewMore-color);
     text-decoration: none;
     transition: 0.3s;
 
