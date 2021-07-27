@@ -4,7 +4,7 @@
   display: flex;
   flex-flow: $direction wrap;
   justify-content: $justify;
-  align-content: $align;
+  align-items: $align;
 }
 
 @mixin tag($bgColor, $textColor) {
@@ -108,29 +108,6 @@
     &__pricing {
       @include cardFont($margin: 1rem 0 0);
     }
-
-    /* View Trip Button */
-    &__viewTrip {
-      position: absolute;
-      bottom: 10%;
-      right: 5%;
-      padding: 0.5rem 1rem;
-      background-image: linear-gradient(
-        to right,
-        rgb(117, 43, 255),
-        rgb(28, 145, 255)
-      );
-
-      @include cardFont($weight: 500, $color: $--card-link-white);
-      text-decoration: none;
-      border-radius: 50px;
-      transition: 0.3s;
-
-      &:hover {
-        color: $--card-link-white-hover;
-        transform: translateY(-0.1rem);
-      }
-    }
   }
 
   /* Card Like Button */
@@ -204,17 +181,36 @@
 
 /* Card 3 Specific Design */
 .card3 {
-  grid-column: span 2;
+  @include flex(column, flex-end, stretch);
   background-image: url('../assets/imgs/bg-2.png');
   background-size: cover;
 
   &__description {
-    position: absolute;
-    bottom: 10%;
-    padding-left: 1rem;
-    width: 70%;
+    @include flex(row, space-between, center);
+    margin: 1rem 0;
+    padding: 0 1rem;
+    border-left: 2px solid $--card-text-green;
     font-size: 1.5rem;
-    border-left: 4px solid $--card-text-green;
+  }
+
+  /* View Trip Button */
+  .card__viewTrip {
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(
+      to right,
+      rgb(117, 43, 255),
+      rgb(28, 145, 255)
+    );
+
+    @include cardFont($weight: 500, $color: $--card-link-white);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $--card-link-white-hover;
+      transform: translateY(-0.1rem);
+    }
   }
 
   &__artWord {
