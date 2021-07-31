@@ -1,0 +1,249 @@
+@import 'colors';
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-flow: $direction wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin tag($bgColor, $textColor) {
+  background: $bgColor;
+  color: $textColor;
+}
+
+// Just A
+@mixin cardFont($margin: 0, $size: 1rem, $weight: 400, $color: #000000) {
+  margin: $margin;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+// or A + B
+@mixin cardTitle($color) {
+  @include cardFont($size: 1.5rem, $color: $color);
+}
+
+// or A and C
+@mixin cardSubtitle($color) {
+  margin: 0;
+  font-weight: 300;
+  color: $color;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: stretch;
+  align-items: stretch;
+  margin: auto;
+  padding: 3rem;
+
+  .card {
+    position: relative;
+    min-height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px #2b2b2b59;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    &:active {
+      transform: scale(1.005);
+    }
+
+    /* Card Tag Design */
+    &__tag {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      z-index: 1;
+      padding: 0.2rem 1rem;
+      opacity: 0.9;
+      font-weight: 500;
+      border-radius: 3px;
+    }
+
+    .tag {
+      &__red {
+        @include tag($--card-tag-red, $--card-text-white);
+      }
+
+      &__white {
+        @include tag($--card-tag-white, $--card-text-black);
+      }
+    }
+
+    /* Card Text Design  */
+    &__title {
+      &_black {
+        @include cardTitle($color: $--card-text-black);
+      }
+
+      &_white {
+        @include cardTitle($color: $--card-text-white);
+      }
+    }
+
+    &__subtitle {
+      &_grey {
+        @include cardSubtitle($--card-text-grey);
+      }
+
+      &_white {
+        @include cardSubtitle($--card-text-white);
+      }
+
+      &_green {
+        @include cardSubtitle($--card-text-green);
+      }
+    }
+
+    &__review {
+      @include cardFont(1rem 0 0, 0.8rem, 300, $--card-text-lightGrey);
+    }
+
+    &__pricing {
+      @include cardFont($margin: 1rem 0 0);
+    }
+  }
+
+  /* Card Like Button */
+  .card__likeBtn {
+    border: none;
+    background: none;
+
+    .card__likeBtn__icon {
+      transition: 0.3;
+      fill: $--card-likeBtn-color;
+    }
+
+    &:hover .card__likeBtn__icon {
+      fill: $--card-likeBtn-hover-color;
+    }
+
+    &:active .card__likeBtn__icon {
+      fill: $--card-likeBtn-clicked-color;
+    }
+
+    &:visited .card__likeBtn__icon {
+      fill: $--card-likeBtn-clicked-color;
+    }
+  }
+}
+
+/* Card 1 Specific Design */
+.card1 {
+  display: grid;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    background: $--card-bg-white;
+  }
+}
+
+/* Card 2 specific Design */
+.card2 {
+  @include flex(column, flex-end, stretch);
+  background-image: url('../assets/imgs/bg-6.png');
+  background-size: cover;
+
+  &__description {
+    @include flex(row, space-between, flex-end);
+    padding: 1rem;
+  }
+
+  &__viewMore {
+    @include cardFont($size: 2rem, $color: $--card-viewMore-color);
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      color: $--card-viewMore-hover-color;
+    }
+  }
+}
+
+/* Card 3 Specific Design */
+.card3 {
+  @include flex(column, flex-end, stretch);
+  background-image: url('../assets/imgs/bg-2.png');
+  background-size: cover;
+
+  &__description {
+    z-index: 1;
+    @include flex(row, space-between, center);
+    margin: 1rem 0;
+    padding: 0 1rem;
+    border-left: 2px solid $--card-text-green;
+    font-size: 1.5rem;
+  }
+
+  /* View Trip Button */
+  .card__viewTrip {
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(
+      to right,
+      rgb(117, 43, 255),
+      rgb(28, 145, 255)
+    );
+
+    @include cardFont($weight: 500, $color: $--card-link-white);
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $--card-link-white-hover;
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  &__artWord {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    font-size: 10rem;
+    color: $--card-text-white;
+    opacity: 0.1;
+  }
+}
+
+/* Card 5 Specific Design */
+.card5 {
+  &__image {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    position: absolute;
+    padding: 1rem;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 75%;
+    border-radius: 10px;
+    background: $--card-bg-white;
+  }
+}

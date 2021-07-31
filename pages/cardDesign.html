@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/universal.css" />
-    <link rel="stylesheet" href="cardDesign.css" />
+    <title>Norris Wu | Card Design Assignment</title>
+    <link rel="icon" href="/assets/site-icon.ico" />
+    <link rel="stylesheet" href="/css/universal.min.css" />
+    <link rel="stylesheet" href="/css/cardDesign.min.css" />
   </head>
   <body>
     <div class="cards">
       <div class="card card1">
         <div class="card__tag tag__red">Italy</div>
-        <div class="card1__top">
-          <img class="card1__image" src="./assets/bg-3.png" />
+        <div>
+          <img class="card1__image" src="../assets/imgs/bg-3.png" />
         </div>
         <div class="card1__bot">
-          <div class="card1__bot_left">
+          <div>
             <h3 class="card__title_black">Venice, Italy</h3>
             <h4 class="card__subtitle_grey">Also known as I have no idea</h4>
           </div>
-          <div class="card1__bot_right">
-            <a class="card__likeBtn" href="#">
+          <div>
+            <button class="card__likeBtn" href="#">
               <svg
                 width="30px"
                 height="29px"
@@ -58,7 +59,7 @@
                   </g>
                 </g>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -66,25 +67,31 @@
       <div class="card card2">
         <div class="card__tag tag__red">Italy</div>
         <div class="card2__description">
-          <h3 class="card__title_white">The Blue House</h3>
-          <h4 class="card__subtitle_white">Burano, Venice, Italy</h4>
-          <h5 class="card__review">420 reviews</h5>
+          <div>
+            <h3 class="card__title_white">The Blue House</h3>
+            <h4 class="card__subtitle_white">Burano, Venice, Italy</h4>
+            <h5 class="card__review">420 reviews</h5>
+          </div>
+          <div>
+            <a href="" class="card2__viewMore">...</a>
+          </div>
         </div>
-        <a href="" class="card2__viewMore">...</a>
       </div>
 
       <div class="card card3">
         <div class="card__tag tag__white">Italy</div>
         <div class="card3__description">
-          <h4 class="card__subtitle_green">July 2021</h4>
-          <h3 class="card__title_white">Florence, Italy</h3>
+          <div>
+            <h4 class="card__subtitle_green">July 2021</h4>
+            <h3 class="card__title_white">Florence, Italy</h3>
+          </div>
+          <button href="#" class="card__viewTrip">View Trip</button>
         </div>
-        <a href="#" class="card__viewTrip">View Trip</a>
         <span class="card3__artWord">Florence</span>
       </div>
 
       <div class="card card5">
-        <img class="card5__image" src="./assets/bg-1.png" />
+        <img class="card5__image" src="../assets/imgs/bg-1.png" />
         <div class="card5__description">
           <h5 class="card__review">228 reviews</h5>
           <h3 class="card__title_black">The Orange House</h3>
